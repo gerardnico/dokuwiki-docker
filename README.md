@@ -14,14 +14,25 @@ A whole article is available here: [PHP - (Debug|Debugger) with Xdebug in Docker
 
 Short version:
   * Install Docker. See this [article](https://gerardnico.com/vm/docker/installation_windows_10) for Windows 10 or this [one](https://gerardnico.com/vm/docker/installation_windows_7) for Windows 7
-  * Create a container by mounting your whole application to `/var/www/html`. For instance in a DOS Shell
+  * Create a container by mounting your whole application to `/var/www/html`. For instance:
 ```dos
+REM in a DOS Shell
 cd YourApplication
 docker run ^
     --name myapp ^
     -d ^
     -p 80:80 ^
     -v %cd%:/var/www/html ^
+    gerardnico/php-dev:7.2
+```
+```powershell
+# in Powershell
+cd YourApplication
+docker run `
+    --name myapp `
+    -d `
+    -p 80:80 `
+    -v ${pwd}:/var/www/html `
     gerardnico/php-dev:7.2
 ```
   * Then [start debugging](https://gerardnico.com/lang/php/debug#start_debug). 
