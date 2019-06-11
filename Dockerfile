@@ -25,6 +25,8 @@ RUN wget -q http://xdebug.org/files/xdebug-2.6.0.tgz && \
 # Apache
 RUN cp /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
 
+# To allow CORS
+COPY ./apache2.conf /etc/apache2/apache2.conf
 
 ## Config files
 COPY php.ini /usr/local/etc/php/
