@@ -22,8 +22,10 @@ RUN wget -q http://xdebug.org/files/xdebug-2.6.0.tgz && \
 	cd .. && \
 	rm -r *.*
 	
-# Apache
+# Apache Rewrite
 RUN cp /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
+# Headers to add the CORS headers in apache2.conf
+RUN cp /etc/apache2/mods-available/headers.load /etc/apache2/mods-enabled/
 
 # To allow CORS
 COPY ./apache2.conf /etc/apache2/apache2.conf
