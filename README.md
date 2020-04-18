@@ -1,11 +1,13 @@
 # Php Dev environment in Docker
 
+![Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=gerardnico&repository=php-dev)
+
 ## About
 
 This is a docker image that I use as development environment with:
 
   * Php 7.2
-  * Xdebug 2.6
+  * Xdebug 2.6 
   * Apache:
       * Mod Rewrite enabled
       * Cors enabled
@@ -13,13 +15,15 @@ This is a docker image that I use as development environment with:
 ## Configuration
 
 The important configuration is the `xdebug.remote_host` in the [php.ini](php.ini).
-
-The value is now:
+This configuration is where `xdebug` should send its data.
+ 
+The value is now set to the `docker host` 
 ```ini
 xdebug.remote_host=host.docker.internal
 ```
 
-If your docker set up uses another name or ip to contact your laptop, you need to change this configuration.
+If your docker setup uses another name or ip to contact your ide (laptop), you need to change this configuration
+and restart the container.
 
 ## Usage on Windows
 
