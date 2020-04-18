@@ -3,12 +3,11 @@ FROM php:7.2.2-apache
 # https://hub.docker.com/_/php/
 
 MAINTAINER Nicolas GERARD
-WORKDIR /tmp
 
 ## Tools
 # Package
 RUN apt-get -y update && apt-get install \
-        wget
+        wget nmap vim
 
 # Xdebugs
 RUN wget -q http://xdebug.org/files/xdebug-2.6.0.tgz && \
