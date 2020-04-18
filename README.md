@@ -1,6 +1,6 @@
 # Php Dev environment in Docker
 
-![Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=gerardnico&repository=php-dev)
+![Docker Build Status](https://img.shields.io/docker/build/gerardnico/php-dev)
 
 ## About
 
