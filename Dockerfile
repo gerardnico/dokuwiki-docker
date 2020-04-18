@@ -4,10 +4,16 @@ FROM php:7.2.2-apache
 
 MAINTAINER Nicolas GERARD
 
+#################################
+# Sys Install
+#################################
+RUN	echo "==> Update" && \
+    apt-get update
+
 ## Tools
 # Package
-RUN apt-get -y update && apt-get install \
-        wget nmap vim
+RUN	echo "==> Install Tools" && \
+    apt-get install -y wget nmap vim
 
 # Xdebugs
 RUN wget -q http://xdebug.org/files/xdebug-2.6.0.tgz && \

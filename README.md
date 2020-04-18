@@ -10,9 +10,18 @@ This is a docker image that I use as development environment with:
       * Mod Rewrite enabled
       * Cors enabled
   
+## Configuration
 
+The important configuration is the `xdebug.remote_host` in the [php.ini](php.ini).
 
-## Setup on Windows
+The value is now:
+```ini
+xdebug.remote_host=host.docker.internal
+```
+
+If your docker set up uses another name or ip to contact your laptop, you need to change this configuration.
+
+## Usage on Windows
 
 A whole article is available here: [PHP - (Debug|Debugger) with Xdebug in Docker](https://gerardnico.com/lang/php/debug)
 
