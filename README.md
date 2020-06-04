@@ -6,15 +6,17 @@
 
 This is a docker image that I use as development environment with:
 
-  * Php 7.2
-  * Xdebug 2.6 
+  * Php
+    * [7.2](./7.2/Dockerfile) - Xdebug 2.6
+    * [7.4](./7.4/Dockerfile) - Xdebug 20190902
+
   * Apache:
       * Mod Rewrite enabled
       * Cors enabled
   
 ## Configuration
 
-The important configuration is the `xdebug.remote_host` in the [php.ini](php.ini).
+The important configuration is the `xdebug.remote_host` in the [php.ini](7.4/php.ini).
 This configuration is where `xdebug` should send its data.
  
 The value is now set to the `docker host` 
@@ -42,7 +44,7 @@ docker run ^
     -d ^
     -p 80:80 ^
     -v %cd%:/var/www/html ^
-    gerardnico/php-dev:7.2
+    gerardnico/php-dev:7.4
 ```
 ```powershell
 # in Powershell
@@ -56,3 +58,10 @@ docker run `
 ```
   * Then [start debugging](https://gerardnico.com/lang/php/debug#start_debug). 
 
+## FYI
+
+### Get a bash shell
+
+```bash
+docker exec -ti $(CONTAINER) /bin/bash
+```
