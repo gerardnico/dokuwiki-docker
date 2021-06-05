@@ -47,7 +47,7 @@ A whole article is available here: [PHP - (Debug|Debugger) with Xdebug in Docker
 
 Short version:
 
-  * Install Docker. See this [article](https://gerardnico.com/vm/docker/installation_windows_10) for Windows 10 or this [one](https://gerardnico.com/vm/docker/installation_windows_7) for Windows 7
+  * Install Docker. See this [article](https://datacadamia.com/vm/docker/installation_windows_10) for Windows 10 or this [one](https://gerardnico.com/vm/docker/installation_windows_7) for Windows 7
   * Create a container by mounting your whole application to `/var/www/html`. For instance:
 ```dos
 REM in a DOS Shell

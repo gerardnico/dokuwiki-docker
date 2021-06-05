@@ -1,4 +1,4 @@
-FROM php:7.4.6-apache
+FROM php:7.4.20-apache
 
 # https://hub.docker.com/_/php/
 
@@ -18,7 +18,7 @@ RUN	echo "==> Install Tools" && \
 # As stated here http://xdebug.org/docs/install
 # Tip: Installation from source was done on 7.2 docker file
 RUN echo "==> Installing Xdebug" && \
-    pecl install xdebug-3.0.2
+    pecl install xdebug-3.0.4
 
 	
 # Apache Rewrite
